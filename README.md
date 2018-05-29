@@ -1,6 +1,6 @@
-  =====================================
-|	PASSO 1 - INSTALANDO O NODE 		|
-  =====================================
+
+PASSO 1 - INSTALANDO O NODE
+=====================================
 
 	1 - Dentro da pasta Server existe uma pasta "bin" com o instalador do NodeJS
 		- Instale o NodeJS de forma padrão.
@@ -8,9 +8,9 @@
 		- O node e o NPM serão adicionados automaticamente ao Path da maquina
 
 
-  =====================================
-|	PASSO 2 - INSTALANDO O MYSQL 		|
-  =====================================
+
+PASSO 2 - INSTALANDO O MYSQL
+=====================================
 
 	1 - Acesse o site abaixo e faça o download do MySQL
 
@@ -74,9 +74,9 @@
 
 
 
-  =====================================
-|	PASSO 3 - EXECUTANDO O NODE     	|
-  =====================================
+
+PASSO 3 - EXECUTANDO O NODE
+=====================================
 
  	1. -	Agora, acesse a pasta "Server" do seu projeto pelo terminal.
  			Tem um arquivo chamado "server.js"
