@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+
+    <title>Amaro - API</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-pagina container-fluid">
+            <a href="/">
+                <img class="logo" src="img/logo.png" alt="logo-amaro">
+            </a>
+        </div>
+    </header>
+
+    <form class="mt-2 ml-4" action="../products/summary" method="POST">
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="data_inicial">Start Time</label>
+                <input name="startdate" type="text" class="form-control" id="data_inicial" placeholder="aaaa-MM-dd hh:mm:ss" required>
+                <small id="dataHelper" class="form-text text-muted">Type the data like 2016-01-03 13:55:00</small>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="data_final">End Time</label>
+                <input name="enddate" type="text" class="form-control" id="data_final" placeholder="aaaa-MM-dd hh:mm:ss" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="aggreg">Aggregation</label>
+                <input name="aggregation" type="number" class="form-control" id="aggreg" min="1" max="60" value="1">
+                <small id="aggregHelper" class="form-text text-muted">Choose interval aggregation to receive the values. It's expressed in minutes (E.g: if it´s 60 then will return
+                    one value per hour)
+                </small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="prod">Product</label>
+                <input name="product" type="text" class="form-control" id="prod" placeholder="Optional. Type in a product name to query">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="platf">Platform</label>
+                <select name="platform" class="form-control" id="platf" ng-selected="All">
+                    <option>All</option>
+                    <option>iOS</option>
+                    <option>Android</option>
+                    <option>MobileWeb</option>
+                </select>
+                <small id="platHelper" class="form-text text-muted">Choose wich platform to query from</small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <div name="usespark" class="checkbox" id="spark">
+                    <label>
+                        <input type="checkbox" value=""> Use Apache Spark</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-primary ml-3">Submit</button>
+            <button type="reset" class="btn btn-primary ml-3">Clear form</button>
+        </div>
+    </form>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

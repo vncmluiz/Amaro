@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+
+    <title>Amaro - Lista de Produtos</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-pagina container-fluid">
+            <a href="/"><img class="logo" src="/img/logo.png" alt="logo-amaro"></a>
+        </div>
+    </header>
+
+    <div class="container-fluid mt-2 ml-2">
+        <div class="row about-me justify-content-md-left">
+            <div class="col-10">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Timestamp</th>
+                            <th scope="col">Platform</th>
+                            <th scope="col">Product</th>
+                            <th scope="col">CTR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let index = 0; index < productsEvents.length; index++) {%>
+                            <tr>
+                                <th scope="row">
+                                    <%= index %>
+                                </th>
+                                <td>
+                                    <%= productsEvents[index].timestamp %>
+                                </td>
+                                <td>
+                                    <%= productsEvents[index].platform %>
+                                </td>
+                                <td>
+                                    <%= productsEvents[index].product %>
+                                </td>
+                                <td>
+                                    <%= productsEvents[index].CTR %>
+                                </td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row about-me justify-content-md-left">
+            <a href="/"><button type="button" class="btn btn-info">Back</button></a>
+        </div>
+    </div>
+    
+
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+</body>
+</html>

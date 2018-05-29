@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+
+    <title>Amaro - API</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-pagina container-fluid">
+            <a href="/">
+                <img class="logo" src="img/logo.png" alt="logo-amaro">
+            </a>
+        </div>
+    </header>
+
+    <div class="container-fluid mt-2 ml-4">
+        <div class="row about-me justify-content-md-center">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">About this tool</h2>
+                        <p class="card-text">This tools is intended to help you get the CTR metric for a given criteria of filters.</p>
+                        <p class="card-text">I have implemented the logic of both Front and Back-end system to guide you through the usage and better experience during the presentation</p>
+                        <p>The server is waiting for requests in the following format:</p>
+                        <ul>
+                            <li><p><b>startTimestamp</b>: This field is mandatory. You have to send it as timestamp of 10 digits and will be returned as date of format of '2016-01-03 13:55:00</p></li>
+                            <li><p><b>endTimestamp</b>: This field is mandatory. You have to send it as timestamp of 10 digits</p></li>
+                            <li><p><b>aggregation</b>: This field is mandatory. It´s a number between 1 and 60, represented as minutes within an hour and will be the main aggregation factor
+                                Since timestamp 0 is 1970-01-01 00:00:00, if you choose the number 6, the values will be divided into partitions of 6 minutes.
+                                This form, the transactions will be grouped into bins of 6 to 6 minutes
+                                All the values will be group into minimum statTimestamp found of Purchases history that belongs to that partition
+                            </p></li>
+                            <li><p><b>product</b>: This is an optional parameter. I have not used this field on queries because I didn´t get the logic to query this on table order_items</p></li>
+                            <li><p><b>platform</b>: This is an optional parameter. The client may want to filter one of the 3 platforms 'iOS', 'Android', 'MobileWeb'. If empty, values will be grouped onto all device_types</p></li>
+                        </ul>
+                        <br>
+
+                        <h2>Requesting through HTTP GET</h2>
+                        <p>To do a HTTP request to the Server, use the following URL format:</p>
+                        <div class="container-fluid">
+                            <div class="row about-me justify-content-md-center">
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <p class="p-helplink">http://localhost:3000/products/summary?<b>startdate=1454284800&enddate=1454371199&aggregation=10&platform=MobileWeb&product=XPTO</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="p-1">Click on the button bellow and you will be redirected to the Front-end form</p>
+                        <a href="/form" class="btn btn-primary btn-start btn-to-form">Let´s Start</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

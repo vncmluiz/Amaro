@@ -1,0 +1,40 @@
+[
+  {
+    "events": [
+      {
+        "data": {
+          "custom_event_type": "navigation",
+          "event_name": "product",
+          "timestamp_unixtime_ms": 1454284800000,
+          "event_id": 679644799952992000,
+          "session_id": 7147916473548190000,
+          "custom_attributes": {
+            "codeColor": "20005748_001"
+          }
+        },
+        "event_type": "custom_event"
+      }
+    ],
+    "mpid": 196509116834317000,
+    "timestamp_unixtime_ms": 1515546904352
+  },
+  {
+    "events": [
+      {
+        "data": {
+          "custom_event_type": "navigation",
+          "event_name": "product",
+          "timestamp_unixtime_ms": 1454361579158.9556,
+          "event_id": 679644799952992000,
+          "session_id": 7147916473548190000,
+          "custom_attributes": {
+            "codeColor": "20005748_001"
+          }
+        },
+        "event_type": "custom_event"
+      }
+    ],
+    "mpid": 196509116834317000,
+    "timestamp_unixtime_ms": 1515593813277.4377
+  }
+]
