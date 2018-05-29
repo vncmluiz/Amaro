@@ -26,7 +26,7 @@ function routeProducts(app) {
 
             },
             json: function () {
-                getCTR(app, req, res, 'POST', 'pageRendered');
+                getCTR(app, req, res, 'POST', 'browser');
             }
         });
 

@@ -28,11 +28,8 @@ var requestCTR = {
 
 client.end(
 
-    
-    process.argv.forEach(function (val, index, array) {
-        console.log(index + ': ' + val);
-    })
+    client.end(JSON.stringify(requestCTR))   
+    // process.argv.forEach(function (val, index, array) {
+    //     console.log(index + ': ' + val);
+    // })
 );
-
-
-//client.end(JSON.stringify(requestCTR));

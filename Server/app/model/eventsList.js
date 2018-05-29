@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const alasql = require('alasql');
 
-function returnEvents(startDate, endDate, aggregation, platform, product) {
+function returnEvents(startDate, endDate, aggregation, platform, product = null) {
     let allEvents = [];
 
     switch (platform) {
